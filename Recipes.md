@@ -10,7 +10,7 @@ bitbake -c listtasks <recipe_name>  ; display recipes list for target
  
 #Example of simple recipe:
 ============================
-
+```
 SUMMARY = "Simple helloworld application"
 SECTION = "examples"
 LICENSE = "MIT"
@@ -28,6 +28,7 @@ do_install() {
     install -d ${D}${bindir}
     install -m 0755 helloworld ${D}${bindir}
 }
+```
 
 #Example if makefile based
 
