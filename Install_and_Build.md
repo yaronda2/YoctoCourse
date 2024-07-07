@@ -38,6 +38,6 @@ export LC_ALL=C
 #Build - warning this command can take a few hours
 bitbake core-image-minimal
 
-#After Succes image build run the emulator
-runqemu
+#After Succes image build run the emulator - in splitted terminal
+runqemu  slirp nographic
 
