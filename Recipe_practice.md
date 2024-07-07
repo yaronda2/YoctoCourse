@@ -14,7 +14,9 @@ use example of simple recipe with .c file and modify the .c file to program of o
 3)mkdir recipes-apps/<name_app>
 4)create bb file and name it according to app name and add version -> for example if the app name is 'Fibonacci' 
 5) located bb in : meta-student/recipes-apps/Fibonacci/Fibonacci_1.0.bb
-
-5)copy code to 'files' folder 
-
+5)open in edit mode the Fibonacci_1.0.bb file and add to the file the simple example - from recipes section
+6)edit the SRC_URI variable and also made the change in do_install , summary , sections , do_compile.
+7)mkdir files : meta-student/recipes-apps/Fibonacci/files
+8)create the .c file according the name in .bb file and paste the source code from the URL and save.
+9)run : bitbake Fibonacci
 ```
