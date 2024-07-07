@@ -1,5 +1,5 @@
  #Layers basic Commands
-  
+ #Important note : to run these commands you must be located under 'build' directory.
  #Show Layers - bblayers.conf
  bitbake-layers show-layers
   
