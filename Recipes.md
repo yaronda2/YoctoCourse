@@ -31,7 +31,7 @@ do_install() {
 ```
 
 #Example if makefile based
-
+```
 UMMARY = "Extremely Fast Compression algorithm"
 DESCRIPTION = "LZ4 is a very fast lossless compression algorithm, providing compression speed at 400 MB/s per core, scalable with multi-cores CPU. It also features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems."
 HOMEPAGE = "https://github.com/lz4/lz4"
@@ -62,3 +62,4 @@ do_install() {
 }
 
 BBCLASSEXTEND = "native nativesdk"
+```
