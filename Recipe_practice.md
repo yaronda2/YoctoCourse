@@ -22,7 +22,7 @@ use example of simple recipe with .c file and modify the .c file to program of o
 ```
 
 ```
-#Tested
+***Tested
 ~/YoctoStudent$ cd meta-student/
 mkdir -p  recipes-apps/swap-numbers
 cp recipes-example/example/example_0.1.bb recipes-apps/swap-numbers/swap-numbers_1.0.bb
