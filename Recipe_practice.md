@@ -26,3 +26,21 @@ use example of simple recipe with .c file and modify the .c file to program of o
 ~/YoctoStudent$ cd meta-student/
 mkdir -p  recipes-apps/swap-numbers
 cp recipes-example/example/example_0.1.bb recipes-apps/swap-numbers/swap-numbers_1.0.bb
+mkdir recipes-apps/swap-numbers/files
+cp recipes-apps/swap-numbers/swap.c  recipes-apps/swap-numbers/files
+
+#edit file swap-numbers_1.0.bb
+
+```
+#find the build in  : 
+bitbake -e | grep ^WORKDIR
+file  /var/yocto/tmp/work/core2-64-poky-linux/swap-numbers/
+
+#to check recipes in layers installed
+bitbake-layers show-recipes | grep swap
+
+#add package to os
+add to lcoal.conf
+IMAGE_INSTALL:append = " swap-numbers"
+
+```
