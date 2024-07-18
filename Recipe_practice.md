@@ -20,3 +20,8 @@ use example of simple recipe with .c file and modify the .c file to program of o
 8)create the .c file according the name in .bb file and paste the source code from the URL and save.
 9)run : bitbake Fibonacci
 ```
+
+```
+#Tested
+~/YoctoStudent$ cd meta-student/
+mkdir -p  recipes-apps/swap-numbers
