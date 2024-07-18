@@ -1,5 +1,12 @@
-#Create  recipe named my_first_recipe.bb
-#add it to layer
+***Practice :***
+add .c program to image , to do it need to add the src .c file to recipe that will contain in a layer , to edit .bb recipe file according
+and build it , finally need to add it to image.
+
+***Steps:***
+1)edit new recipe in studentlayer - you can use suitable simple .bb file from recipes.
+2)add .c file to recipe folder (under <recipe_name>/files)
+3)build the recipe - check it compiled
+4)add it to image in local.conf
 
 use example of simple recipe with .c file and modify the .c file to program of one of the https://www.programiz.com/c-programming/examples
 #add source files 
@@ -8,18 +15,6 @@ use example of simple recipe with .c file and modify the .c file to program of o
 #configure the recipe
 
 #solution
-```
-1)open URL https://www.programiz.com/c-programming/examples  - and choose one - for this example I used C `Program to Display Fibonacci Sequence` and copy code
-2)go to meta-student/ layer directory
-3)mkdir recipes-apps/<name_app>
-4)create bb file and name it according to app name and add version -> for example if the app name is 'Fibonacci' 
-5) located bb in : meta-student/recipes-apps/Fibonacci/Fibonacci_1.0.bb
-5)open in edit mode the Fibonacci_1.0.bb file and add to the file the simple example - from recipes section
-6)edit the SRC_URI variable and also made the change in do_install , summary , sections , do_compile.
-7)mkdir files : meta-student/recipes-apps/Fibonacci/files
-8)create the .c file according the name in .bb file and paste the source code from the URL and save.
-9)run : bitbake Fibonacci
-```
 
 ***Tested***
 ```
