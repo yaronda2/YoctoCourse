@@ -21,13 +21,14 @@ use example of simple recipe with .c file and modify the .c file to program of o
 9)run : bitbake Fibonacci
 ```
 
-```
 ***Tested
-~/YoctoStudent$ cd meta-student/
+```
+cd ~/YoctoStudent/meta-student 
 mkdir -p  recipes-apps/swap-numbers
 cp recipes-example/example/example_0.1.bb recipes-apps/swap-numbers/swap-numbers_1.0.bb
 mkdir recipes-apps/swap-numbers/files
 cp recipes-apps/swap-numbers/swap.c  recipes-apps/swap-numbers/files
+```
 
 #edit file swap-numbers_1.0.bb
 ```
@@ -58,10 +59,10 @@ file  /var/yocto/tmp/work/core2-64-poky-linux/swap-numbers/
 ```
 
 #to check recipes is layers installed
-bitbake-layers show-recipes | grep swap
+```bitbake-layers show-recipes | grep swap```
 
 #add package to os
 ```
-add to lcoal.conf
+add to local.conf
 IMAGE_INSTALL:append = " swap-numbers"
 ```
