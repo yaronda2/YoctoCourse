@@ -30,17 +30,38 @@ mkdir recipes-apps/swap-numbers/files
 cp recipes-apps/swap-numbers/swap.c  recipes-apps/swap-numbers/files
 
 #edit file swap-numbers_1.0.bb
-
 ```
+SUMMARY = "swap-numbers app"
+DESCRIPTION = "Swap numbers between 2 given numbers"
+LICENSE = "MIT"
+
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+
+SRC_URI = "file://swap.c"
+
+S = "${WORKDIR}"
+
+do_compile() {
+    ${CC} ${LDFLAGS} swap.c -o swap-numbers
+}
+
+do_install() {
+    install -d ${D}${bindir}
+    install -m 0755 swap-numbers ${D}${bindir}
+}
+```
+
 #find the build in  : 
+```
 bitbake -e | grep ^WORKDIR
 file  /var/yocto/tmp/work/core2-64-poky-linux/swap-numbers/
+```
 
-#to check recipes in layers installed
+#to check recipes is layers installed
 bitbake-layers show-recipes | grep swap
 
 #add package to os
+```
 add to lcoal.conf
 IMAGE_INSTALL:append = " swap-numbers"
-
 ```
