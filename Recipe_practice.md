@@ -21,7 +21,7 @@ use example of simple recipe with .c file and modify the .c file to program of o
 9)run : bitbake Fibonacci
 ```
 
-***Tested
+***Tested***
 ```
 cd ~/YoctoStudent/meta-student 
 mkdir -p  recipes-apps/swap-numbers
@@ -30,7 +30,7 @@ mkdir recipes-apps/swap-numbers/files
 cp recipes-apps/swap-numbers/swap.c  recipes-apps/swap-numbers/files
 ```
 
-#edit file swap-numbers_1.0.bb
+***edit file swap-numbers_1.0.bb***
 ```
 SUMMARY = "swap-numbers app"
 DESCRIPTION = "Swap numbers between 2 given numbers"
@@ -52,17 +52,17 @@ do_install() {
 }
 ```
 
-#find the build in  : 
+***find the build in *** 
 ```
 bitbake -e | grep ^WORKDIR
 file  /var/yocto/tmp/work/core2-64-poky-linux/swap-numbers/
 ```
 
-#to check recipes is layers installed
+***to check recipes is layers installed***
 ```bitbake-layers show-recipes | grep swap```
 
-#add package to os
+***add package to os***
 ```
-add to local.conf
+***add to local.conf***
 IMAGE_INSTALL:append = " swap-numbers"
 ```
